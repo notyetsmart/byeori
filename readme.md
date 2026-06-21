@@ -1,1 +1,0 @@
-GTX 1050 기준 torch 설치 버전 추천: `uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126`
