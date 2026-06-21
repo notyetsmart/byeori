@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Qdrant
+qdrant_storage/
+
+# Reports
+reports/
+
+# Test images
+test_photos/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
