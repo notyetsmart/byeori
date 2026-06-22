@@ -110,77 +110,78 @@ uv
 ```
 
 1. Clone Repository
-```bash
-git clone https://github.com/notyetsmart/byeori.git
-cd byeori
-```
+   ```bash
+   git clone https://github.com/notyetsmart/byeori.git
+   cd byeori
+   ```
 
 2. Install Dependencies
-```bash
-uv sync
-```
+   ```bash
+   uv sync
+   ```
 
 또는
 
-```bash
-uv pip install -r requirements.txt
-```
+   ```bash
+   uv pip install -r requirements.txt
+   ```
 
 3. Start Qdrant
-docker run -d \
-  --name byeori-qdrant \
-  -p 6433:6333 \
-  -p 6434:6334 \
-  -v $(pwd)/qdrant_storage:/qdrant/storage \
-  qdrant/qdrant
+   ```bash
+   docker run -d \
+     --name byeori-qdrant \
+     -p 6433:6333 \
+     -p 6434:6334 \
+     -v $(pwd)/qdrant_storage:/qdrant/storage \
+     qdrant/qdrant
+   ```
 
 4. Prepare Images
-
 검색할 이미지를 test_photos/ 폴더에 넣습니다.
-'''text
-test_photos/
-├── 1.jpg
-├── 2.jpg
-└── ...'''
+   ```text
+   test_photos/
+   ├── 1.jpg
+   ├── 2.jpg
+   └── ...
+   ```
 
 
 5. Index Images
-```bash
-uv run python -m scripts.index_photos
-```
+   ```bash
+   uv run python -m scripts.index_photos
+   ```
 6. Search by Text
-```bash
-uv run python -m scripts.search_text
-```
+   ```bash
+   uv run python -m scripts.search_text
+   ```
 
 예시
 
-```bash
-검색어를 입력하세요: sunset
-```
+   ```bash
+   검색어를 입력하세요: sunset
+   ```
 
 7. Search by Image
-```bash
-uv run python -m scripts.search_image
-```
+   ```bash
+   uv run python -m scripts.search_image
+   ```
 
 예시
 
-```bash
-검색할 이미지 경로를 입력하세요: test_photos/3.jpg
-```
+   ```bash
+   검색할 이미지 경로를 입력하세요: test_photos/3.jpg
+   ```
 
 8. Generate Report
 - JSON 리포트 생성
-```bash
-uv run python -m scripts.report_photos
-```
+   ```bash
+   uv run python -m scripts.report_photos
+   ```
 
 - HTML 리포트 생성
-
-```bash
-uv run python -m scripts.report_html
-```
+   ```bash
+   uv run python -m scripts.report_html
+   ```
 
 ---
 
