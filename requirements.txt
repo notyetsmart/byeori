@@ -1,4 +1,0 @@
-torch
-sentence-transformers
-pillow
-qdrant_client

@@ -1,0 +1,15 @@
+[project]
+name = "byeori"
+version = "0.1.0"
+description = "Local AI-powered media indexing and semantic search engine"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "numpy",
+    "pillow",
+    "torch",
+    "sentence-transformers",
+    "qdrant-client",
+    "tqdm",
+]
